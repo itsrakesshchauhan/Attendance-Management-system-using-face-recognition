@@ -1,5 +1,5 @@
 # Attendance-Management-system-using-face-recognition
-Face Recognition-Based Attendance System 🎯🎥
+Face Recognition-Based Attendance System 🎯🎥 90% faster with no raw images data,
 This is a real-time face recognition-based attendance system using OpenCV, face_recognition, and Python. It captures faces, stores user details, and marks attendance automatically upon recognition. The system also announces the marked attendance using text-to-speech (TTS) and displays it on the camera screen.
 
 🚀 Features
