@@ -13,7 +13,6 @@
 </div>
 
 ---
-
 ## 📌 Project Overview
 
 A **real-time face recognition–based attendance system** built using **Python**, **OpenCV**, and **face_recognition**.  
