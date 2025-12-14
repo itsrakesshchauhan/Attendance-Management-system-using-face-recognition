@@ -1,77 +1,137 @@
-# Attendance-Management-system-using-face-recognition
-Face Recognition-Based Attendance System 🎯🎥 90% faster with no raw images data,
-This is a real-time face recognition-based attendance system using OpenCV, face_recognition, and Python. It captures faces, stores user details, and marks attendance automatically upon recognition. The system also announces the marked attendance using text-to-speech (TTS) and displays it on the camera screen.
+<div align="center">
 
-🚀 Features
-✅ Face Registration: Capture and store face encodings with name, enrollment number, roll number, and class.
-✅ Real-Time Face Recognition: Detects and identifies faces from a live camera feed.
-✅ Attendance Marking: Press 'o' to mark attendance when a face is recognized.
-✅ Prevents Duplicate Entries: Ensures each person’s attendance is marked only once per session.
-✅ Text-to-Speech (TTS) Notification: Announces "Name - Attendance Marked ✅" when attendance is recorded.
-✅ On-Screen Display: Shows the recognized name and a message confirming attendance on the webcam feed.
-✅ Data Storage: Stores faces in faces_data.pkl, names in names.pkl, and user info in user_info.pkl.
-✅ Exports Attendance Record: Attendance is logged in attendance.csv with a timestamp.
+# 🎯 Attendance Management System  
+## Using Face Recognition 🧠🎥  
 
-🛠 Installation & Setup
-1️⃣ Clone the Repository
+![Python](https://img.shields.io/badge/Python-3.8+-blue)
+![OpenCV](https://img.shields.io/badge/OpenCV-Real--Time-green)
+![AI](https://img.shields.io/badge/AI-Face%20Recognition-orange)
+![Status](https://img.shields.io/badge/Project-Active-success)
+
+⚡ **90% Faster Attendance | No Raw Images Stored | Real-Time Recognition**
+
+</div>
+
+---
+
+## 📌 Project Overview
+
+A **real-time face recognition–based attendance system** built using **Python**, **OpenCV**, and **face_recognition**.  
+The system captures faces, stores **only encodings (no raw images)**, and automatically marks attendance with **audio and visual confirmation**.
+
+---
+
+## 🚀 Features
+
+| Feature | Description |
+|------|------------|
+| 🧠 Face Registration | Stores face encodings with name, enrollment, roll & class |
+| 🎥 Live Recognition | Detects and recognizes faces via webcam |
+| ⏱ One-Key Attendance | Press **`o`** to mark attendance |
+| 🔐 Duplicate Prevention | Attendance marked once per session |
+| 🎙 Text-to-Speech | Announces “Name – Attendance Marked ✅” |
+| 📊 CSV Export | Attendance saved with timestamp |
+
+---
+
+## 🛠 Installation & Setup
+
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/your-username/Attendance-Management-system-using-face-recognition.git
+cd Attendance-Management-system-using-face-recognition 
+```
 
 2️⃣ Install Dependencies
+```
+pip install opencv-python face-recognition numpy pyttsx3
+```
 
-3️⃣ Run Face Registration (To add a new face)
+### Usage Instructions
+
+Step 1: Register Face
+```
 python add_new.py
+```
+📝 Enter:
+```
+Name
 
-📌 Follow the instructions to capture your face and input details.
+Enrollment Number
 
-4️⃣ Run Attendance System
+Roll Number
 
+Class
+```
+Captures ~100 face images (< 1 minute)
+
+and Creates files in "data/" Folder
+```
+faces_data.pkl
+names.pkl
+user_info.pkl
+```
+Step 2: Start Attendance System
+```
 python attendance.py
+```
+Controls:
 
-🎥 Press 'o' to mark attendance
-🛑 Press 'q' to quit
+o → Mark Attendance ✅
 
-📂 File Structure
-bash
-Copy
-Edit
-📁 face-recognition-attendance/
-│── 📂 data/                   # Stores face encodings, names, and user info
-│── 📜 add_new.py        # Script to register a new face
-│── 📜 attendance.py           # Real-time face recognition and attendance marking
-│── 📜 attendance_record.py     # Checks attendance record
-│── 📜 README.md               # Project documentation
+q → Quit System
+
+---
+
+Step 3: Check Attendance Logs
+```
+python attendance_record.py
+```
+or
+
+```
+open attendance.csv
+```
+---
+## Project Structure
+```bash
+📁 face-recognition-attendance
+│
+├── 📂 data
+│   ├── faces_data.pkl
+│   ├── names.pkl
+│   └── user_info.pkl
+│
+├── add_new.py
+├── attendance.py
+├── attendance_record.py
+├── attendance.csv
+└── README.md
+```
+---
+## Technologies Used
+| Technology          | Purpose                  |
+| ------------------- | ------------------------ |
+| 🐍 Python           | Core Logic               |
+| 🎥 OpenCV           | Face Detection           |
+| 🧠 face_recognition | Face Encoding & Matching |
+| 🔢 NumPy            | Numerical Processing     |
+| 🎙 pyttsx3          | Text-to-Speech           |
+| 🗂 Pickle           | Data Storage             |
+
+---
+### Future Improvement
+1. 🗄 Database Integration (MySQL / MongoDB / Firebase)
+
+2. 🖥 GUI Interface
+
+3. 👥 Multi-Person Recognition
+
+4. ☁ Cloud Attendance Sync
+---
+<div align="center">
+❤️ Like this project?
+⭐ Star the repo & Follow me on GitHub
+</div> ```
 
 
-📌 Usage Instructions
-
-1️⃣ Register Faces 🏷
-
-Run add_new.py
-Enter Name, Enrollment No, Roll No, Class
-Capture 100 face images  #take less than 1 min
-
-_# It will create three files in data forlder :-- " 1.faces_data.pkl , 2. names.pkl , 3. user_info.pkl "_
-
-2️⃣ Start Attendance System 📸
-Run attendance.py
-Look at the camera → Face will be recognized
-Press 'o' → Attendance will be marked ✅
-Press 'q' → Quit the system
-
-3️⃣ Check Attendance Logs 📄
-Run attendance_record.py or
-Open attendance.csv to see recorded entries.
-
-⚡ Technologies Used
-Python 🐍
-OpenCV 🎥 (Real-time Face Detection)
-Face Recognition 🏷 (Encoding & Matching Faces)
-NumPy 🔢 (Array Processing)
-Pyttsx3 🎙 (Text-to-Speech Announcement)
-Pickle 🗂 (Data Storage)
-
-💡 Future Improvements
-🔹 Store attendance in a database (SQL, Firebase, MongoDB)
-🔹 Add GUI for better usability
-🔹 Implement multi-person recognition
-
-❤️ #**Follow me if you like my work**
